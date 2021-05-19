@@ -1,9 +1,19 @@
 
 // registro el SW
 
+//cambio para publicacion en produccion(web)
+const url= window.location.href;  //esto me devuelve la url del navegador
+
+let localRegisterSW='/twittor/'; //aca va la raiz de mi publicacion en prod ejemplo githuhpages https://smolina-dev.github.io/twittor/
+
+
+
 if (navigator.serviceWorker){
 
-    navigator.serviceWorker.register('/sw.js');
+    if( url.includes('localhost')) {  //si estoy en desarrollo (localhost)
+        localRegisterSW='/sw.js';
+    }
+    navigator.serviceWorker.register(localRegisterSW);
 }
 
 

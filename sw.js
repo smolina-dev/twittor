@@ -6,7 +6,7 @@ const INMUTABLE_CACHE = 'inmutable-v2';
 
 
 const APP_SHELL=[
-    '/',
+    // '/',  comento para publicar en produccion
     'index.html',
     'css/style.css',
     'img/favicon.ico',
@@ -42,7 +42,7 @@ self.addEventListener('install', e =>{
     const cacheDynamic= caches.open( DYNAMIC_CACHE). then( cache => {
 
          cache.addAll(APP_SHELL_INMUTABLE);
-    })
+    });
 
     e.waitUntil( Promise.all([ cacheStatic, cacheDynamic]) );  //
 
