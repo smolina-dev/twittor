@@ -2,9 +2,9 @@
 // registro el SW
 
 //cambio para publicacion en produccion(web)
-const url= window.location.href;  //esto me devuelve la url del navegador
+var url= window.location.href;  //esto me devuelve la url del navegador
 
-let localRegisterSW='/twittor/'; //aca va la raiz de mi publicacion en prod ejemplo githuhpages https://smolina-dev.github.io/twittor/
+var localRegisterSW='/twittor/'; //aca va la raiz de mi publicacion en prod ejemplo githuhpages https://smolina-dev.github.io/twittor/
 
 
 
